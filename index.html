@@ -10,14 +10,23 @@
       html, body {
         margin: 0;
         font-family: 'Roboto';
+        background: #41cbeb;
       }
 
-      .blue-background {
-        background-color: #41cbeb;
+      a {
+        text-decoration: none;
       }
 
-      .white-text p, .white-text h1, .white-text h2, .white-text h3, .white-text h4, .white-text h5, .white-text h6, .white-text a {
+      .white-text p, .white-text h1, .white-text h2, .white-text h3, .white-text h4, .white-text h5, .white-text h6, .white-text a, .white-text li {
         color: white;
+      }
+
+      .white-background {
+        background: white;
+      }
+
+      .deep-blue-background {
+        background: #0A4E5E;
       }
 
       .gray-text p, .gray-text h1, .gray-text h2, .gray-text h3, .gray-text h4, .gray-text h5, .gray-text h6, .gray-text li, .gray-text a {
@@ -26,6 +35,15 @@
 
       .main-container {
         overflow:hidden;
+        width: 50%;
+        max-width: 960px;
+        float: left;
+      }
+
+      .right-container {
+        float: left;
+        width: 50%;
+        margin: 0 auto;
       }
 
       .main-title h1 {
@@ -44,36 +62,53 @@
         line-height: 0;
       }
 
+      .main-title h3 {
+        font-size: 1.6em;
+        font-weight: 100;
+        letter-spacing: .1em;
+      }
+
       .main-title {
         font-family: 'Roboto';
-        float: left;
-        padding: 10em 1em;
+        padding: 25vh 1em;
       }
 
       .value-proposition {
-        float: left;
         font-family: 'Roboto';
         color: #0A4E5E;
-        font-size: 4em;
-        max-width: 33vw;
         text-align: right;
-        padding: 2em 0;
+        padding: 25vh 2em 0 2em;
+      }
+
+      .value-proposition h2{
+        font-size:4em;
+        font-weight:100;
+      }
+
+      .value-proposition h3 {
+        font-size: 2.4em;
+        font-weight: 400;
+        text-transform: uppercase;
       }
 
       a.main-contact-button{
-        font-size: 2em;
+        background: #107a93;
         color: white;
-        text-decoration: none;
-        letter-spacing: .12em;
-        background: #0A4E5E;
-        font-weight: 800;
-        width:100%;
-        margin-left:0;
-        margin-right:0;
-        padding: 1em 0;
-        text-transform: uppercase;
         display:block;
-        text-align:center; /*This will result in centering the link text, which is probably what you want -brianjohnsondesign.com*/
+        font-family: 'Montserrat';
+        font-size: 4em;
+        font-weight: 800;
+        letter-spacing: .08em;
+        margin: 0 auto;
+        padding: 10vh 0 ;
+        text-transform: uppercase;
+        text-align:center;
+        text-decoration: none;
+        width:100%;
+      }
+
+      a.main-contact-button:hover {
+        background: #16a6c8;
       }
 
       .links li {
@@ -84,30 +119,42 @@
 
       .info {
         text-align: center;
-        padding: 4em;
+        position: absolute;
+        right:0;
+        bottom:0;
+      }
 
+      .smaller {
+        font-size: 50%;
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
       }
 
     </style>
   </head>
     <body>
       <header>
-       <div class="main-container blue-background">
+       <div class="main-container">
         <div class="main-title white-text">
          <h1>THINK</h1>
          <h2>Methodology</h2>
          <h3>By Manuable</h3>
         </div>
-        <div class="value-proposition roboto">
-          <p>We turn your company into a technology company.</p>
-        </div>
       </div>
       </header>
-     <footer class="links gray-text info">
-        <li>Manuable © 2015<li>
-        <li>Email</li>
-        <li>Facebook</li>
-        <li>Twitter</li>
-      </footer>
+      <div class="right-container white-background">
+        <div class="value-proposition">
+          <h2>WE TURN YOUR COMPANY INTO A TECHNOLOGY COMPANY.</h2>
+          <h3>Want to work with us?</h3>
+        </div>
+        <a href="mailto:hola@manuable.com" class="main-contact-button">Let's do it!</a>
+        <footer class="links white-text info">
+          <li>Manuable © 2015<li>
+          <li><a href="mailto:hola@manuable.com">Email</a></li>
+          <li><a href="http://facebook.com/manuable.com" target="_blank">Facebook</a></li>
+          <li><a href="http://twitter.com/manuable.com" target="_blank">Twitter</a></li>
+        </footer>
+      </div>
     </body>
 </html>

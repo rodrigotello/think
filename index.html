@@ -10,50 +10,58 @@
       html, body {
         margin: 0;
         font-family: 'Roboto';
-        background: #41cbeb;
+       
       }
 
       a {
         text-decoration: none;
       }
-
-      .white-text p, .white-text h1, .white-text h2, .white-text h3, .white-text h4, .white-text h5, .white-text h6, .white-text a, .white-text li {
-        color: white;
-      }
-
-      .white-background {
-        background: white;
-      }
-
-      .deep-blue-background {
-        background: #0A4E5E;
-      }
-
-      .gray-text p, .gray-text h1, .gray-text h2, .gray-text h3, .gray-text h4, .gray-text h5, .gray-text h6, .gray-text li, .gray-text a {
-        color: gray;
-      }
-
-      .main-container {
+      
+      .main { 
         overflow:hidden;
-        width: 50%;
-        max-width: 960px;
-        float: left;
+        width: 100%;
+        height:100%;
+            background-color:#41cbeb;
+      
+     
       }
+      .left-container, .right-container {
+        float:left;
+        width:50%;
+        height:100%;
 
-      .right-container {
-        float: left;
-        width: 50%;
-        margin: 0 auto;
       }
+      
+      .white-background {
+        background-color: #fff;
+      }
+      .left-container .white-title {
+        color:#fff;
+        padding:25vh 1.5em 0 1.5em;
+     
+      }
+      
+      footer ul.links{
+        list-style: none;
+        background-color: #0a4e5e;
+        margin:0 auto;
+        padding-top:10px;
+        padding-bottom:10px;
 
-      .main-title h1 {
+      }
+      ul.links li, ul.links li a {
+        display:inline;
+        margin:0 1em;
+        color:#fff;
+      }
+      
+      .white-title h1 {
         font-family: 'Roboto Slab';
         letter-spacing: .25em;
         font-size: 8.4em;
         line-height: 0;
       }
-
-      .main-title h2 {
+       .white-title h2 {
         font-family: 'Roboto Condensed';
         font-weight: 400;
         letter-spacing: .15em;
@@ -62,15 +70,10 @@
         line-height: 0;
       }
 
-      .main-title h3 {
+      .whitetitle h3 {
         font-size: 1.6em;
         font-weight: 100;
         letter-spacing: .1em;
-      }
-
-      .main-title {
-        font-family: 'Roboto';
-        padding: 25vh 1em;
       }
 
       .value-proposition {
@@ -79,7 +82,7 @@
         text-align: right;
         padding: 25vh 2em 0 2em;
       }
-
+      
       .value-proposition h2{
         font-size:4em;
         font-weight:100;
@@ -88,12 +91,16 @@
       .value-proposition h3 {
         font-size: 2.4em;
         font-weight: 400;
-        text-transform: uppercase;
+        text-transform: uppercase;}
+
+      .action {
+        background-color: #107a93;
+
       }
 
-      a.main-contact-button{
-        background: #107a93;
-        color: white;
+      .action a.main-contact-button{
+    
+        color:#fff;
         display:block;
         font-family: 'Montserrat';
         font-size: 4em;
@@ -104,57 +111,59 @@
         text-transform: uppercase;
         text-align:center;
         text-decoration: none;
-        width:100%;
+      
       }
 
-      a.main-contact-button:hover {
+       .action a.main-contact-button:hover {
         background: #16a6c8;
       }
-
-      .links li {
-        list-style: none;
-        display: inline-block;
-        margin: 0 2em;
+      /*mediaqueries*/
+      @media all and (max-width: 1200px)  {
+     .left-container, .right-container { 
+      float:none;
+      width:100%; 
+      text-align: center;
+     }
+     .left-container .white-title, .value-proposition {
+       
+        padding:15vh 1.5em 15vh 1.5em;
+        text-align: center
+     
       }
-
-      .info {
-        text-align: center;
-        position: absolute;
-        right:0;
-        bottom:0;
-      }
-
-      .smaller {
-        font-size: 50%;
-        line-height: 1em;
-        margin: 0;
-        padding: 0;
-      }
+   }
 
     </style>
   </head>
     <body>
-      <header>
-       <div class="main-container">
-        <div class="main-title white-text">
-         <h1>THINK</h1>
-         <h2>Methodology</h2>
-         <h3>By Manuable</h3>
+      <div class="main">
+        <div class="left-container">
+          <div class="white-title"> 
+            <h1>THINK</h1>
+            <h2>Methodology</h2>
+            <h3>By Manuable</h3>
+          </div>
+        </div>
+       
+        <div class="right-container white-background">
+          <div class="value-proposition">
+            <h2>WE TURN YOUR COMPANY INTO A TECHNOLOGY COMPANY.</h2>
+            <h3>Want to work with us?</h3>
+          </div>
+          <div class="action">
+             <a href="mailto:hola@manuable.com" class="main-contact-button">Let's do it!</a>
+          </div>
+
+          <footer>
+            <ul class="links white-text">
+            <li>Manuable © 2015</li>
+            <li><a href="mailto:hola@manuable.com">Email</a>
+            </li>
+            <li><a href="http://facebook.com/manuable.com" target="_blank">Facebook</a></li>
+            <li><a href="http://twitter.com/manuable.com" target="_blank">Twitter</a></li>
+          </ul>
+          </footer>
         </div>
       </div>
-      </header>
-      <div class="right-container white-background">
-        <div class="value-proposition">
-          <h2>WE TURN YOUR COMPANY INTO A TECHNOLOGY COMPANY.</h2>
-          <h3>Want to work with us?</h3>
-        </div>
-        <a href="mailto:hola@manuable.com" class="main-contact-button">Let's do it!</a>
-        <footer class="links white-text info">
-          <li>Manuable © 2015<li>
-          <li><a href="mailto:hola@manuable.com">Email</a></li>
-          <li><a href="http://facebook.com/manuable.com" target="_blank">Facebook</a></li>
-          <li><a href="http://twitter.com/manuable.com" target="_blank">Twitter</a></li>
-        </footer>
-      </div>
+
     </body>
 </html>
